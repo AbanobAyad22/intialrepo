@@ -246,9 +246,189 @@
 
 # --------------------------
 
-read -p "Enter a string: " s
-if [[ "$s" =~ [0-9] ]]; then
-  echo "contains digits"
-else
-  echo "no digits"
-fi
+# read -p "Enter a string: " s
+# if [[ "$s" =~ [0-9] ]]; then
+#   echo "contains digits"
+# else
+#   echo "no digits"
+# fi
+
+
+# ----------------------------------
+# logical operators
+# -------------------
+# and     && 
+# or      ||
+
+
+
+# a=10
+# b=20
+# if [ $a -lt 15 ] && [ $b -gt 18 ]; then
+#     echo "Both conditions are true"
+# else
+#     echo "One or both conditions are false"
+# fi
+
+
+# a=10
+# b=20
+# if [ $a -lt 9 ] || [ $b -gt 22 ]; then
+#     echo "At least one condition is true"
+# else
+#     echo "Neither condition is true"
+# fi
+# ------------------------------
+# nested if statements
+# ------------------------------
+# a=40
+# if [ $a -gt 23 ]; then
+#    if [ $a -lt 30 ]; then
+#         echo "$a is greater than 10 and less than 30"
+#    else
+#         echo "$a is greater than 10 but not less than 30"
+#    fi 
+# else
+#    echo "$a is  greater than 10  but not less than 30"
+# fi
+
+# ------------------------
+# for loop
+# ----------
+# for var in 1 2 3 4 5 ;
+# do
+#     echo "The value is: $var"
+# done
+
+# -----------------
+# for var in {1..10} ;
+# do  
+#     echo "The value is: $var"
+# done
+
+# --------------
+# for var in {1..10..4} ;
+# do 
+#     echo "The value is: $var"
+# done
+
+# ---------------------------------
+# for (( var=1; var<=10;  ));
+# do
+#     echo "The value is: $var"
+#     ((var++))
+# done
+
+# --------
+# for (( var=1; var<=10; var++ ));
+# do
+#     echo "The value is: $var"
+# done
+# ---------------------------
+# while loop
+# ----------
+# var=1
+# while [ $var -le 10 ];
+# do
+#     echo "$var"
+#     ((var++))
+# done
+
+
+
+
+# --------------------
+# drop down menu
+# --------------
+
+# select option in "createDb" "createTable" "deleteTable" "Exit"
+# do
+#     case $option in
+#         "createDb") 
+#             scripts/./script1.sh ;;
+#         "createTable")
+#             #   cd scripts/
+#              ./scripts/script2.sh ;;
+#         "deleteTable")
+#              cd scripts/ ;
+#              ./script3.sh ;;
+#         "Exit")
+#              echo "Exiting the program..."
+#              break ;;
+#     *) echo "Invalid option";;
+
+#     esac
+# done    
+
+
+# select option in "green" "red" "blue" "Exit"
+
+# do 
+#    case $option in
+#         "green") 
+#              echo "You selected green" ;;
+#         "red")
+#              echo "You selected red" ;;
+#         "blue")
+#              echo "You selected blue" ;;
+#         "Exit")
+#              echo "Exiting the program..."
+#              break ;;
+#     *) echo "Invalid option";;
+#    esac   
+# done
+
+# -------------------------------------------
+# function 
+# ---------
+# function_name() {# commands}
+# function call
+
+# hello() {
+#     echo "Hello, abanoub"
+# }
+# hello
+# hello
+
+
+# hello() {
+#     echo "Hello, $1"
+# }
+# hello "$1"
+
+
+
+# add() {
+#     sum=$(( $1 + $2 ))
+#     echo "The sum of $1 and $2 is = $sum"
+# }
+# add "1" "5"
+
+
+# add () {
+#     sum=$(( $1 + $2 ))
+#     echo "The sum of $1 and $2 is = $sum"
+# }
+# add "$1" "$2"
+# add "5" "10"
+# num1=15
+# num2=20
+# add "$num1" "$num2"
+
+# add   () {
+#     sum=$(( $1 + $2 ))
+#     echo "The sum of $1 and $2 is = $sum"
+# }
+# read -p "Enter your first number: " num1
+# read -p "Enter your second number: " num2
+# add "$num1" "$num2"
+# -----------------------------------------
+
+# check_file_exists() {
+#     if [ -f "$1" ]; then
+#         echo "File exists"
+#     else
+#         echo "File does not exist"
+#     fi
+# }
+# check_file_exists "$1"
